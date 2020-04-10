@@ -11,8 +11,8 @@ const LimitDiscount = () => {
 						<Text style={styles.scrollItemName}>[特惠] 龙利鱼片</Text>
 					</ImageBackground>
 					<View style={styles.priceDiv}>
-						<Text style={{ color: 'red', fontSize: 20, marginTop: 5 }}>$6.99</Text>
-						<Text style={{ marginLeft: 10, marginTop: 3, textDecorationLine: 'line-through' }}>$9.99</Text>
+						<Text style={styles.newPrice}>$6.99</Text>
+						<Text style={styles.oldPrice}>$9.99</Text>
 					</View>
 					<Text>澳门豆捞</Text>
 				</TouchableOpacity>
@@ -21,8 +21,8 @@ const LimitDiscount = () => {
 						<Text style={styles.scrollItemName}>[特惠] 龙利鱼片</Text>
 					</ImageBackground>
 					<View style={styles.priceDiv}>
-						<Text style={{ color: 'red', fontSize: 20, marginTop: 5 }}>$6.99</Text>
-						<Text style={{ marginLeft: 10, marginTop: 3, textDecorationLine: 'line-through' }}>$9.99</Text>
+						<Text style={styles.newPrice}>$6.99</Text>
+						<Text style={styles.oldPrice}>$9.99</Text>
 					</View>
 					<Text>澳门豆捞</Text>
 				</TouchableOpacity>
@@ -31,8 +31,8 @@ const LimitDiscount = () => {
 						<Text style={styles.scrollItemName}>[特惠] 龙利鱼片</Text>
 					</ImageBackground>
 					<View style={styles.priceDiv}>
-						<Text style={{ color: 'red', fontSize: 20, marginTop: 5 }}>$6.99</Text>
-						<Text style={{ marginLeft: 10, marginTop: 3, textDecorationLine: 'line-through' }}>$9.99</Text>
+						<Text style={styles.newPrice}>$6.99</Text>
+						<Text style={styles.oldPrice}>$9.99</Text>
 					</View>
 					<Text>澳门豆捞</Text>
 				</TouchableOpacity>
@@ -41,8 +41,18 @@ const LimitDiscount = () => {
 						<Text style={styles.scrollItemName}>[特惠] 龙利鱼片</Text>
 					</ImageBackground>
 					<View style={styles.priceDiv}>
-						<Text style={{ color: 'red', fontSize: 20, marginTop: 5 }}>$6.99</Text>
-						<Text style={{ marginLeft: 10, marginTop: 3, textDecorationLine: 'line-through' }}>$9.99</Text>
+						<Text style={styles.newPrice}>$6.99</Text>
+						<Text style={styles.oldPrice}>$9.99</Text>
+					</View>
+					<Text>澳门豆捞</Text>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.scrollItem}>
+					<ImageBackground source={require('../assets/fish.jpg')} style={styles.foodBackground}>
+						<Text style={styles.scrollItemName}>[特惠] 龙利鱼片</Text>
+					</ImageBackground>
+					<View style={styles.priceDiv}>
+						<Text style={styles.newPrice}>$6.99</Text>
+						<Text style={styles.oldPrice}>$9.99</Text>
 					</View>
 					<Text>澳门豆捞</Text>
 				</TouchableOpacity>
@@ -53,15 +63,18 @@ const LimitDiscount = () => {
 
 const styles = StyleSheet.create({
 	view: {
-		marginTop: 300,
+		marginTop: 50,
 		height: 245
+	},
+	scrollView: {
+		marginTop: 5
 	},
 	scrollItem: {
 		padding: 10
 	},
 	foodBackground: {
-		minWidth: 150,
-		minHeight: 150
+		minWidth: 135,
+		minHeight: 140
 	},
 	scrollItemName: {
 		marginTop: 130,
@@ -72,6 +85,16 @@ const styles = StyleSheet.create({
 	priceDiv: {
 		flex: 1,
 		flexDirection: 'row'
+	},
+	newPrice: {
+		color: 'red',
+		fontSize: 20,
+		marginTop: 5
+	},
+	oldPrice: {
+		marginLeft: 10,
+		marginTop: 3,
+		textDecorationLine: 'line-through'
 	}
 });
 
