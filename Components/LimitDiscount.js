@@ -70,11 +70,11 @@ const styles = StyleSheet.create({
 		marginTop: 5
 	},
 	scrollItem: {
-		padding: 10
+		padding: 7
 	},
 	foodBackground: {
-		minWidth: 135,
-		minHeight: 140
+		minWidth: 150,
+		minHeight: 150
 	},
 	scrollItemName: {
 		marginTop: 130,

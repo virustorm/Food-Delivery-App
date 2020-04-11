@@ -12,8 +12,8 @@ const ThisWeekHotItem = () => {
 					</ImageBackground>
 					<View style={styles.priceDiv}>
 						<Text style={styles.price}>$11.99</Text>
+						<Text>杨铭宇黄焖...</Text>
 					</View>
-					<Text>杨铭宇黄焖...</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.scrollItem}>
 					<ImageBackground source={require('../assets/黄焖鸡米饭.jpg')} style={styles.foodBackground}>
@@ -21,8 +21,8 @@ const ThisWeekHotItem = () => {
 					</ImageBackground>
 					<View style={styles.priceDiv}>
 						<Text style={styles.price}>$11.99</Text>
+						<Text>杨铭宇黄焖...</Text>
 					</View>
-					<Text>杨铭宇黄焖...</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.scrollItem}>
 					<ImageBackground source={require('../assets/黄焖鸡米饭.jpg')} style={styles.foodBackground}>
@@ -30,8 +30,8 @@ const ThisWeekHotItem = () => {
 					</ImageBackground>
 					<View style={styles.priceDiv}>
 						<Text style={styles.price}>$11.99</Text>
+						<Text>杨铭宇黄焖...</Text>
 					</View>
-					<Text>杨铭宇黄焖...</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.scrollItem}>
 					<ImageBackground source={require('../assets/黄焖鸡米饭.jpg')} style={styles.foodBackground}>
@@ -39,8 +39,8 @@ const ThisWeekHotItem = () => {
 					</ImageBackground>
 					<View style={styles.priceDiv}>
 						<Text style={styles.price}>$11.99</Text>
+						<Text>杨铭宇黄焖...</Text>
 					</View>
-					<Text>杨铭宇黄焖...</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={styles.scrollItem}>
 					<ImageBackground source={require('../assets/黄焖鸡米饭.jpg')} style={styles.foodBackground}>
@@ -48,8 +48,8 @@ const ThisWeekHotItem = () => {
 					</ImageBackground>
 					<View style={styles.priceDiv}>
 						<Text style={styles.price}>$11.99</Text>
+						<Text>杨铭宇黄焖...</Text>
 					</View>
-					<Text>杨铭宇黄焖...</Text>
 				</TouchableOpacity>
 			</ScrollView>
 		</View>
@@ -65,11 +65,11 @@ const styles = StyleSheet.create({
 		marginTop: 5
 	},
 	scrollItem: {
-		padding: 10
+		padding: 7
 	},
 	foodBackground: {
-		minWidth: 135,
-		minHeight: 140
+		minWidth: 140,
+		maxHeight: 120
 	},
 	scrollItemName: {
 		marginTop: 130,
@@ -78,13 +78,14 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold'
 	},
 	priceDiv: {
-		flex: 1,
-		flexDirection: 'row'
+		flex: 1
+		// flexDirection: 'row',
 	},
 	price: {
 		color: 'red',
 		fontSize: 20,
-		marginTop: 5
+		marginTop: 5,
+		marginBottom: 5
 	}
 });
 

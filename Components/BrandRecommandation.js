@@ -28,18 +28,18 @@ const BrandRecommandation = () => {
 
 const styles = StyleSheet.create({
 	view: {
-		marginTop: 50,
-		height: 245
+		height: 245,
+		marginTop: -5
 	},
 	scrollView: {
 		marginTop: 5
 	},
 	scrollItem: {
-		padding: 10
+		padding: 8
 	},
 	brandBackground: {
-		width: 100,
-		height: 100,
+		width: 90,
+		height: 90,
 		borderWidth: 1,
 		borderColor: 'rgba(128,128,128,0.7)',
 		borderRadius: 10
