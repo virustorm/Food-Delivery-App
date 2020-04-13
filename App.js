@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
 	},
 	middleImgDiv: {
 		flex: 1,
-		alignItems: 'center'
+		alignItems: 'center',
+		marginTop: 150
 	},
 	nofee: {
 		height: 100,
-		marginTop: 150,
 		width: screenWidth - 50
 	},
 	hotpotPromo: {

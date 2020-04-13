@@ -9,13 +9,85 @@ const PopularResturant = () => {
 			<TouchableOpacity style={styles.resturantDiv}>
 				<Image source={require('../assets/张亮麻辣烫.jpeg')} style={styles.resturantLogo} />
 				<View style={styles.resturantTextDiv}>
-					<Text>张亮麻辣烫</Text>
-					<Text>配送费 $3.49起</Text>
+					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
 					<View style={styles.resturantBottomTextDiv}>
-						<Text>4.6</Text>
-						<Text>可自提</Text>
-						<Text>自提9折</Text>
-						<Text>安新商家</Text>
+						<View style={styles.ratingDiv}>
+							<Text style={styles.resturantBottomDivRating}>4.6</Text>
+							<Image source={require('../assets/starRating.png')} style={styles.ratingStar} />
+						</View>
+
+						<Text style={styles.pickup}>可自提</Text>
+						<Text style={styles.addon}>自提9折</Text>
+						<Text style={styles.addon}>安新商家</Text>
+					</View>
+				</View>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.resturantDiv}>
+				<Image source={require('../assets/张亮麻辣烫.jpeg')} style={styles.resturantLogo} />
+				<View style={styles.resturantTextDiv}>
+					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
+					<View style={styles.resturantBottomTextDiv}>
+						<View style={styles.ratingDiv}>
+							<Text style={styles.resturantBottomDivRating}>4.6</Text>
+							<Image source={require('../assets/starRating.png')} style={styles.ratingStar} />
+						</View>
+
+						<Text style={styles.pickup}>可自提</Text>
+						<Text style={styles.addon}>自提9折</Text>
+						<Text style={styles.addon}>安新商家</Text>
+					</View>
+				</View>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.resturantDiv}>
+				<Image source={require('../assets/张亮麻辣烫.jpeg')} style={styles.resturantLogo} />
+				<View style={styles.resturantTextDiv}>
+					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
+					<View style={styles.resturantBottomTextDiv}>
+						<View style={styles.ratingDiv}>
+							<Text style={styles.resturantBottomDivRating}>4.6</Text>
+							<Image source={require('../assets/starRating.png')} style={styles.ratingStar} />
+						</View>
+
+						<Text style={styles.pickup}>可自提</Text>
+						<Text style={styles.addon}>自提9折</Text>
+						<Text style={styles.addon}>安新商家</Text>
+					</View>
+				</View>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.resturantDiv}>
+				<Image source={require('../assets/张亮麻辣烫.jpeg')} style={styles.resturantLogo} />
+				<View style={styles.resturantTextDiv}>
+					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
+					<View style={styles.resturantBottomTextDiv}>
+						<View style={styles.ratingDiv}>
+							<Text style={styles.resturantBottomDivRating}>4.6</Text>
+							<Image source={require('../assets/starRating.png')} style={styles.ratingStar} />
+						</View>
+
+						<Text style={styles.pickup}>可自提</Text>
+						<Text style={styles.addon}>自提9折</Text>
+						<Text style={styles.addon}>安新商家</Text>
+					</View>
+				</View>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.resturantDiv}>
+				<Image source={require('../assets/张亮麻辣烫.jpeg')} style={styles.resturantLogo} />
+				<View style={styles.resturantTextDiv}>
+					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
+					<View style={styles.resturantBottomTextDiv}>
+						<View style={styles.ratingDiv}>
+							<Text style={styles.resturantBottomDivRating}>4.6</Text>
+							<Image source={require('../assets/starRating.png')} style={styles.ratingStar} />
+						</View>
+
+						<Text style={styles.pickup}>可自提</Text>
+						<Text style={styles.addon}>自提9折</Text>
+						<Text style={styles.addon}>安新商家</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
@@ -25,26 +97,71 @@ const PopularResturant = () => {
 
 const styles = StyleSheet.create({
 	resturantDiv: {
-		height: 100,
+		height: 140,
 		borderBottomWidth: 1,
-		borderBottomColor: 'black',
+		borderBottomColor: 'rgba(0,0,0,0.5)',
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginTop: 75
+		marginTop: 75,
+		marginLeft: 20,
+		marginRight: 20
 	},
 	resturantLogo: {
 		height: 100,
-		width: screenWidth - 50,
+		width: screenWidth - 40,
 		margin: 10
 	},
 	resturantTextDiv: {
-		alignSelf: 'flex-start',
-		marginLeft: 25
+		alignSelf: 'flex-start'
+		// marginLeft: 20
 	},
 	resturantBottomTextDiv: {
 		flex: 1,
-		flexDirection: 'row'
+		flexDirection: 'row',
+		width: screenWidth / 1.6,
+		justifyContent: 'space-around'
+	},
+	resturnatTextDivFee: {
+		marginBottom: 5,
+		marginTop: 6,
+		color: 'grey'
+	},
+	resturantTextDivTitle: {
+		fontSize: 18,
+		fontWeight: '800'
+	},
+	resturantBottomDivRating: {
+		color: 'white',
+		fontWeight: '500'
+	},
+	ratingStar: {
+		height: 10,
+		width: 10,
+		margin: 'auto'
+	},
+	ratingDiv: {
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'center',
+		backgroundColor: '#fc6f03',
+		justifyContent: 'space-evenly',
+		height: 20
+	},
+	pickup: {
+		borderWidth: 1,
+		borderColor: 'grey',
+		height: 20,
+		paddingTop: 1,
+		marginLeft: 10
+	},
+	addon: {
+		color: '#fc6f03',
+		borderColor: '#fc6f03',
+		borderWidth: 1,
+		height: 20,
+		marginLeft: 10,
+		paddingTop: 1
 	}
 });
 
