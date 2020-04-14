@@ -5,52 +5,194 @@ import LimitDiscount from './Components/LimitDiscount';
 import ThisWeekHotItem from './Components/ThisWeekHotItem';
 import BrandRecommandation from './Components/BrandRecommandation';
 import PopularResturant from './Components/PopularResturant';
+import RecommandedRest from './Components/RecommandedRest';
+import ClosestRest from './Components/ClosestRest';
 
 const screenWidth = Math.round(Dimensions.get('window').width);
 
 const App = () => {
 	const [ currentTab, setCurrentTab ] = useState('热门餐厅');
+	const [ currentNavBColor, setNavColor ] = useState('transparent');
+
+	const checkYPos = (event) => {
+		const newColor = event.nativeEvent.contentOffset.y > 75 ? 'white' : 'transparent';
+		setNavColor(newColor);
+	};
 
 	if (currentTab == '热门餐厅') {
 		return (
-			<ScrollView style={styles.container}>
-				<Header />
-				<TouchableOpacity style={styles.middleImgDiv}>
-					<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
-				</TouchableOpacity>
-				<LimitDiscount />
-				<TouchableOpacity style={styles.middleImgDiv}>
-					<Image source={require('./assets/hotpotPromo.jpeg')} style={styles.hotpotPromo} />
-				</TouchableOpacity>
-				<ThisWeekHotItem />
-				<BrandRecommandation />
-				<View style={styles.restTab}>
-					<TouchableOpacity style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}>
-						<Text
-							style={{
-								fontSize: 20,
-								paddingBottom: 8
+			<View style={{ position: 'relative' }}>
+				<View style={[ styles.view, { backgroundColor: currentNavBColor } ]} />
+				<ScrollView style={styles.container} onScroll={checkYPos} scrollEventThrottle={1}>
+					<Header />
+					<TouchableOpacity style={styles.middleImgDiv}>
+						<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
+					</TouchableOpacity>
+					<LimitDiscount />
+					<TouchableOpacity style={styles.middleImgDiv}>
+						<Image source={require('./assets/hotpotPromo.jpeg')} style={styles.hotpotPromo} />
+					</TouchableOpacity>
+					<ThisWeekHotItem />
+					<BrandRecommandation />
+					<View style={styles.restTab}>
+						<TouchableOpacity
+							style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}
+							onPress={() => {
+								setCurrentTab('热门餐厅');
 							}}
 						>
-							热门餐厅
-						</Text>
+							<Text
+								style={{
+									fontSize: 20,
+									paddingBottom: 8
+								}}
+							>
+								热门餐厅
+							</Text>
+						</TouchableOpacity>
+						<TouchableOpacity
+							style={styles.tabHeader}
+							onPress={() => {
+								setCurrentTab('推荐餐厅');
+							}}
+						>
+							<Text style={styles.tabText}>推荐餐厅</Text>
+						</TouchableOpacity>
+						<TouchableOpacity
+							style={styles.tabHeader}
+							onPress={() => {
+								setCurrentTab('距离最近');
+							}}
+						>
+							<Text style={styles.tabText}>距离最近</Text>
+						</TouchableOpacity>
+					</View>
+					<PopularResturant />
+				</ScrollView>
+			</View>
+		);
+	} else if (currentTab == '推荐餐厅') {
+		return (
+			<View style={{ position: 'relative' }}>
+				<View style={[ styles.view, { backgroundColor: currentNavBColor } ]} />
+				<ScrollView style={styles.container} onScroll={checkYPos} scrollEventThrottle={1}>
+					<Header />
+					<TouchableOpacity style={styles.middleImgDiv}>
+						<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.tabHeader}>
-						<Text style={styles.tabText}>推荐餐厅</Text>
+					<LimitDiscount />
+					<TouchableOpacity style={styles.middleImgDiv}>
+						<Image source={require('./assets/hotpotPromo.jpeg')} style={styles.hotpotPromo} />
 					</TouchableOpacity>
-					<TouchableOpacity style={styles.tabHeader}>
-						<Text style={styles.tabText}>距离最近</Text>
+					<ThisWeekHotItem />
+					<BrandRecommandation />
+					<View style={styles.restTab}>
+						<TouchableOpacity
+							style={styles.tabHeader}
+							onPress={() => {
+								setCurrentTab('热门餐厅');
+							}}
+						>
+							<Text style={styles.tabText}>热门餐厅</Text>
+						</TouchableOpacity>
+						<TouchableOpacity
+							style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}
+							onPress={() => {
+								setCurrentTab('推荐餐厅');
+							}}
+						>
+							<Text
+								style={{
+									fontSize: 20,
+									paddingBottom: 8
+								}}
+							>
+								推荐餐厅
+							</Text>
+						</TouchableOpacity>
+						<TouchableOpacity
+							style={styles.tabHeader}
+							onPress={() => {
+								setCurrentTab('距离最近');
+							}}
+						>
+							<Text style={styles.tabText}>距离最近</Text>
+						</TouchableOpacity>
+					</View>
+					<RecommandedRest />
+				</ScrollView>
+			</View>
+		);
+	} else {
+		return (
+			<View style={{ position: 'relative' }}>
+				<View style={[ styles.view, { backgroundColor: currentNavBColor } ]} />
+
+				<ScrollView style={styles.container} onScroll={checkYPos} scrollEventThrottle={1}>
+					<Header />
+					<TouchableOpacity style={styles.middleImgDiv}>
+						<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
 					</TouchableOpacity>
-				</View>
-				<PopularResturant />
-			</ScrollView>
+					<LimitDiscount />
+					<TouchableOpacity style={styles.middleImgDiv}>
+						<Image source={require('./assets/hotpotPromo.jpeg')} style={styles.hotpotPromo} />
+					</TouchableOpacity>
+					<ThisWeekHotItem />
+					<BrandRecommandation />
+					<View style={styles.restTab}>
+						<TouchableOpacity
+							style={styles.tabHeader}
+							onPress={() => {
+								setCurrentTab('热门餐厅');
+							}}
+						>
+							<Text style={styles.tabText}>热门餐厅</Text>
+						</TouchableOpacity>
+						<TouchableOpacity
+							style={styles.tabHeader}
+							onPress={() => {
+								setCurrentTab('推荐餐厅');
+							}}
+						>
+							<Text style={styles.tabText}>推荐餐厅</Text>
+						</TouchableOpacity>
+						<TouchableOpacity
+							style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}
+							onPress={() => {
+								setCurrentTab('距离最近');
+							}}
+						>
+							<Text
+								style={{
+									fontSize: 20,
+									paddingBottom: 8
+								}}
+							>
+								距离最近
+							</Text>
+						</TouchableOpacity>
+					</View>
+					<ClosestRest />
+				</ScrollView>
+			</View>
 		);
 	}
 };
 
 const styles = StyleSheet.create({
 	container: {
-		width: screenWidth
+		width: screenWidth,
+		position: 'relative'
+	},
+	view: {
+		zIndex: 1,
+		height: 90,
+		width: screenWidth,
+		position: 'absolute',
+		top: 0,
+		right: 0,
+		left: 0,
+		flex: 1
 	},
 	middleImgDiv: {
 		flex: 1,
