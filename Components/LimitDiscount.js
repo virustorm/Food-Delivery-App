@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView, ImageBackg
 
 const LimitDiscount = () => {
 	return (
-		<View style={[ styles.view, { margin: 10 } ]}>
+		<View style={[ styles.view, { margin: 10, marginTop: 30 } ]}>
 			<Text style={{ fontSize: 20, marginLeft: 10 }}>限时优惠</Text>
 			<ScrollView horizontal={true} style={styles.scrollView}>
 				<TouchableOpacity style={styles.scrollItem}>

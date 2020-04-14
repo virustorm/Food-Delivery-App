@@ -9,7 +9,7 @@ const RecommandedRest = () => {
 			<TouchableOpacity style={styles.resturantDiv}>
 				<Image source={require('../assets/michi.jpeg')} style={styles.resturantLogo} />
 				<View style={styles.resturantTextDiv}>
-					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturantTextDivTitle}>Michi米翅</Text>
 					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
 					<View style={styles.resturantBottomTextDiv}>
 						<View style={styles.ratingDiv}>
@@ -19,14 +19,14 @@ const RecommandedRest = () => {
 
 						<Text style={styles.pickup}>可自提</Text>
 						<Text style={styles.addon}>自提9折</Text>
-						<Text style={styles.addon}>安新商家</Text>
+						<Text style={[ styles.addon, { paddingTop: 2 } ]}>安新商家</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
 			<TouchableOpacity style={styles.resturantDiv}>
 				<Image source={require('../assets/michi.jpeg')} style={styles.resturantLogo} />
 				<View style={styles.resturantTextDiv}>
-					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturantTextDivTitle}>Michi米翅</Text>
 					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
 					<View style={styles.resturantBottomTextDiv}>
 						<View style={styles.ratingDiv}>
@@ -36,14 +36,14 @@ const RecommandedRest = () => {
 
 						<Text style={styles.pickup}>可自提</Text>
 						<Text style={styles.addon}>自提9折</Text>
-						<Text style={styles.addon}>安新商家</Text>
+						<Text style={[ styles.addon, { paddingTop: 2 } ]}>安新商家</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
 			<TouchableOpacity style={styles.resturantDiv}>
 				<Image source={require('../assets/michi.jpeg')} style={styles.resturantLogo} />
 				<View style={styles.resturantTextDiv}>
-					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturantTextDivTitle}>Michi米翅</Text>
 					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
 					<View style={styles.resturantBottomTextDiv}>
 						<View style={styles.ratingDiv}>
@@ -53,14 +53,14 @@ const RecommandedRest = () => {
 
 						<Text style={styles.pickup}>可自提</Text>
 						<Text style={styles.addon}>自提9折</Text>
-						<Text style={styles.addon}>安新商家</Text>
+						<Text style={[ styles.addon, { paddingTop: 2 } ]}>安新商家</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
 			<TouchableOpacity style={styles.resturantDiv}>
 				<Image source={require('../assets/michi.jpeg')} style={styles.resturantLogo} />
 				<View style={styles.resturantTextDiv}>
-					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
+					<Text style={styles.resturantTextDivTitle}>Michi米翅</Text>
 					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
 					<View style={styles.resturantBottomTextDiv}>
 						<View style={styles.ratingDiv}>
@@ -70,24 +70,7 @@ const RecommandedRest = () => {
 
 						<Text style={styles.pickup}>可自提</Text>
 						<Text style={styles.addon}>自提9折</Text>
-						<Text style={styles.addon}>安新商家</Text>
-					</View>
-				</View>
-			</TouchableOpacity>
-			<TouchableOpacity style={styles.resturantDiv}>
-				<Image source={require('../assets/michi.jpeg')} style={styles.resturantLogo} />
-				<View style={styles.resturantTextDiv}>
-					<Text style={styles.resturantTextDivTitle}>张亮麻辣烫</Text>
-					<Text style={styles.resturnatTextDivFee}>配送费 $3.49起</Text>
-					<View style={styles.resturantBottomTextDiv}>
-						<View style={styles.ratingDiv}>
-							<Text style={styles.resturantBottomDivRating}>4.6</Text>
-							<Image source={require('../assets/starRating.png')} style={styles.ratingStar} />
-						</View>
-
-						<Text style={styles.pickup}>可自提</Text>
-						<Text style={styles.addon}>自提9折</Text>
-						<Text style={styles.addon}>安新商家</Text>
+						<Text style={[ styles.addon, { paddingTop: 2 } ]}>安新商家</Text>
 					</View>
 				</View>
 			</TouchableOpacity>
@@ -120,8 +103,8 @@ const styles = StyleSheet.create({
 	resturantBottomTextDiv: {
 		flex: 1,
 		flexDirection: 'row',
-		width: screenWidth / 1.6,
-		justifyContent: 'space-around'
+		width: screenWidth / 1.55
+		// justifyContent: 'space-around'
 	},
 	resturnatTextDivFee: {
 		marginBottom: 5,
@@ -153,8 +136,10 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		borderColor: 'grey',
 		height: 20,
-		paddingTop: 1,
-		marginLeft: 10
+		paddingTop: 2,
+		marginLeft: 10,
+		width: 45,
+		textAlign: 'center'
 	},
 	addon: {
 		color: '#fc6f03',
@@ -162,7 +147,11 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		height: 20,
 		marginLeft: 10,
-		paddingTop: 1
+		paddingTop: 1,
+		paddingLeft: 1,
+		paddingRight: 1,
+		width: 60,
+		textAlign: 'center'
 	}
 });
 

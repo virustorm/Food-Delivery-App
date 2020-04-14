@@ -22,14 +22,16 @@ const App = () => {
 	if (currentTab == '热门餐厅') {
 		return (
 			<View style={{ position: 'relative' }}>
-				<View style={[ styles.view, { backgroundColor: currentNavBColor } ]} />
+				<View style={[ styles.view, { backgroundColor: currentNavBColor } ]}>
+					{/* <Text>4333 Central</Text> */}
+				</View>
 				<ScrollView style={styles.container} onScroll={checkYPos} scrollEventThrottle={1}>
 					<Header />
 					<TouchableOpacity style={styles.middleImgDiv}>
 						<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
 					</TouchableOpacity>
 					<LimitDiscount />
-					<TouchableOpacity style={styles.middleImgDiv}>
+					<TouchableOpacity style={[ styles.middleImgDiv, { marginTop: 0 } ]}>
 						<Image source={require('./assets/hotpotPromo.jpeg')} style={styles.hotpotPromo} />
 					</TouchableOpacity>
 					<ThisWeekHotItem />
@@ -197,7 +199,7 @@ const styles = StyleSheet.create({
 	middleImgDiv: {
 		flex: 1,
 		alignItems: 'center',
-		marginTop: 150
+		marginTop: 160
 	},
 	nofee: {
 		height: 100,
