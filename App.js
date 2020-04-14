@@ -107,7 +107,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}
 								onPress={() => {
-									setCurrentTab('热门餐厅');
+									this.setState({
+										currentTab: '热门餐厅'
+									});
 								}}
 							>
 								<Text
@@ -122,7 +124,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={styles.tabHeader}
 								onPress={() => {
-									setCurrentTab('推荐餐厅');
+									this.setState({
+										currentTab: '推荐餐厅'
+									});
 								}}
 							>
 								<Text style={styles.tabText}>推荐餐厅</Text>
@@ -130,7 +134,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={styles.tabHeader}
 								onPress={() => {
-									setCurrentTab('距离最近');
+									this.setState({
+										currentTab: '距离最近'
+									});
 								}}
 							>
 								<Text style={styles.tabText}>距离最近</Text>
@@ -143,8 +149,13 @@ export default class App extends Component {
 		} else if (this.state.currentTab == '推荐餐厅') {
 			return (
 				<View style={{ position: 'relative' }}>
-					<View style={[ styles.view, { backgroundColor: currentNavBColor } ]} />
-					<ScrollView style={styles.container} onScroll={checkYPos} scrollEventThrottle={1}>
+					<View style={[ styles.navBar, { backgroundColor: this.state.currentNavBColor } ]}>
+						<Text numberOfLines={1} style={[ styles.navBarAddress, { color: this.state.navAddressColor } ]}>
+							{this.state.userAddress}
+						</Text>
+						<TextInput style={styles.navBarInput} placeholder="搜索商家" />
+					</View>
+					<ScrollView style={styles.container} onScroll={this.checkYPos} scrollEventThrottle={1}>
 						<Header />
 						<TouchableOpacity style={styles.middleImgDiv}>
 							<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
@@ -159,7 +170,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={styles.tabHeader}
 								onPress={() => {
-									setCurrentTab('热门餐厅');
+									this.setState({
+										currentTab: '热门餐厅'
+									});
 								}}
 							>
 								<Text style={styles.tabText}>热门餐厅</Text>
@@ -167,7 +180,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}
 								onPress={() => {
-									setCurrentTab('推荐餐厅');
+									this.setState({
+										currentTab: '推荐餐厅'
+									});
 								}}
 							>
 								<Text
@@ -182,7 +197,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={styles.tabHeader}
 								onPress={() => {
-									setCurrentTab('距离最近');
+									this.setState({
+										currentTab: '距离最近'
+									});
 								}}
 							>
 								<Text style={styles.tabText}>距离最近</Text>
@@ -195,9 +212,13 @@ export default class App extends Component {
 		} else {
 			return (
 				<View style={{ position: 'relative' }}>
-					<View style={[ styles.view, { backgroundColor: currentNavBColor } ]} />
-
-					<ScrollView style={styles.container} onScroll={checkYPos} scrollEventThrottle={1}>
+					<View style={[ styles.navBar, { backgroundColor: this.state.currentNavBColor } ]}>
+						<Text numberOfLines={1} style={[ styles.navBarAddress, { color: this.state.navAddressColor } ]}>
+							{this.state.userAddress}
+						</Text>
+						<TextInput style={styles.navBarInput} placeholder="搜索商家" />
+					</View>
+					<ScrollView style={styles.container} onScroll={this.checkYPos} scrollEventThrottle={1}>
 						<Header />
 						<TouchableOpacity style={styles.middleImgDiv}>
 							<Image source={require('./assets/howcuttingdo.jpg')} style={styles.nofee} />
@@ -212,7 +233,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={styles.tabHeader}
 								onPress={() => {
-									setCurrentTab('热门餐厅');
+									this.setState({
+										currentTab: '热门餐厅'
+									});
 								}}
 							>
 								<Text style={styles.tabText}>热门餐厅</Text>
@@ -220,7 +243,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={styles.tabHeader}
 								onPress={() => {
-									setCurrentTab('推荐餐厅');
+									this.setState({
+										currentTab: '推荐餐厅'
+									});
 								}}
 							>
 								<Text style={styles.tabText}>推荐餐厅</Text>
@@ -228,7 +253,9 @@ export default class App extends Component {
 							<TouchableOpacity
 								style={{ ...styles.tabHeader, borderBottomColor: 'black', borderBottomWidth: 1 }}
 								onPress={() => {
-									setCurrentTab('距离最近');
+									this.setState({
+										currentTab: '距离最近'
+									});
 								}}
 							>
 								<Text
@@ -280,7 +307,7 @@ const styles = StyleSheet.create({
 		height: 25,
 		borderRadius: 10,
 		backgroundColor: 'rgba(242,242,242,1)',
-		marginTop: 25
+		marginTop: 20
 	},
 	middleImgDiv: {
 		flex: 1,
